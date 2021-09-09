@@ -1,0 +1,16 @@
+<a href="#"><img class="madamus_logo" src="assets/madamus_logo.jpg"></a>
+<header class="header">
+  
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li *ngIf="accountService.currentUser$ | async" class="nav-item">
+      <a class="nav-link" routerLink="/control-panel">Panel</a>
+    </li>
+    
+    <li><a class="nav-link" routerLink="/arts">Art</a></li>
+    <li><a class="nav-link" routerLink="/tattoos">Tattoos</a></li>
+    <li><a class="nav-link" routerLink="/projects">Available projects</a></li>
+    
+  </ul>
+</header>

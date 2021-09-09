@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="update()">
+        <h2 class="text-center text-primary">Edit project</h2>
+
+
+
+
+        <div class="form-group">
+            <label for="name">Title</label>
+            <input formControlName="title" id="title" type="text" class="form-control" [(ngModel)]="project.title">
+            <div *ngIf="f.title.touched && f.title.invalid" class="alert alert-danger">
+                <div *ngIf="f.title.errors.required">Title is required.</div>
+                <div *ngIf="f.title.errors.minlength">Title should be 3 character.</div>
+            </div>
+            <label for="name">Description</label>
+            <input formControlName="description" id="description" type="text" class="form-control"
+                [(ngModel)]="project.description">
+            <div *ngIf="f.description.touched && f.description.invalid" class="alert alert-danger">
+                <div *ngIf="f.description.errors.required">Description is required.</div>
+            </div>
+
+        </div>
+
+
+
+        <img [src]="project.img" *ngIf="!imageSrc" style="max-height: 60vh; max-width:50vh">
+        <img [src]="imageSrc" *ngIf="imageSrc" style="max-height: 60vh; max-width:50vh">
+        <div>
+            <button class="btn btn-primary" type="submit">Submit changes</button>
+            <button class="btn btn-danger" routerLink="/control-panel">Cancel</button>
+        </div>
+
+
+
+    </form>
+</div>

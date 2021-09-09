@@ -1,0 +1,7 @@
+<div class="image-mosaic">
+    <div *ngFor="let art of arts"
+      class="card card-tall card-wide"
+      style="background-image: url({{art.img}})"
+      routerLink="/arts/{{art._id}}"
+    ></div>
+</div>

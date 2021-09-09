@@ -1,0 +1,7 @@
+<div class="image-mosaic">
+    <div *ngFor="let tattoo of tattoos"
+      class="card card-tall card-wide"
+      style="background-image: url({{tattoo.img}})"
+      routerLink="/tattoos/{{tattoo._id}}"
+    ></div>
+</div>

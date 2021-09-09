@@ -1,0 +1,15 @@
+.flex-grid-thirds {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-grid-thirds .col {
+    width: 32%;
+  }
+  h1 {
+      padding-bottom: 10px;
+  }
+
+  .btn {
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }

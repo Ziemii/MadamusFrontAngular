@@ -1,0 +1,10 @@
+.btn {
+    margin: 1px;
+    height: 2vh;
+    text-align: start;
+}
+
+.addButton {
+    height: 5vh;
+    width: 10vh;
+}

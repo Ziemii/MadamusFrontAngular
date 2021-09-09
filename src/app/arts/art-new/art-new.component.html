@@ -1,0 +1,44 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <h2 class="text-center text-primary">Add new Art</h2>
+
+        <div class="form-group">
+            <label for="name">Title</label>
+            <input formControlName="title" id="title" type="text" class="form-control">
+            <div *ngIf="f.title.touched && f.title.invalid" class="alert alert-danger">
+                <div *ngIf="f.title.errors.required">Title is required.</div>
+                <div *ngIf="f.title.errors.minlength">Title should be 3 character.</div>
+            </div>
+            <label for="name">Description</label>
+            <input formControlName="description" id="description" type="text" class="form-control">
+            <div *ngIf="f.description.touched && f.description.invalid" class="alert alert-danger">
+                <div *ngIf="f.description.errors.required">description is required.</div>
+            </div>
+            <label for="name">Price</label>
+            <input formControlName="price" id="price" type="text" class="form-control">
+            <div *ngIf="f.price.touched && f.price.invalid" class="alert alert-danger">
+                <div *ngIf="f.price.errors.required">price is required.</div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="file">File</label>
+            <input id="img" type="file" class="form-control" (change)="onFileChange($event, 'img')">
+            <div *ngIf="f.img.touched && f.img.invalid" class="alert alert-danger">
+
+                <div *ngIf="f.img.errors.required">File is required.</div>
+
+            </div>
+
+        </div>
+        <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-danger" routerLink="/control-panel">Cancel</button>
+
+
+
+
+    </form>
+</div>

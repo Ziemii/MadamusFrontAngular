@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "adroit-crow-325021",
+    "public": "dist/client/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+<div >
+    <div class="container">
+       <h2>Arts<button  routerLink="/art-new"  class="addButton btn btn-success btn-sm d-flex align-items-center">New Art</button></h2> 
+    </div>
+    
+    <ul>
+        <li *ngFor="let art of arts">
+            <a routerLink='/arts/{{art._id}}'>{{art.title}}</a>
+            <div>
+                <button routerLink='/art-edit/{{art._id}}' class="btn btn-primary btn-sm d-flex align-items-center">Edit</button>
+                <button (click)="deleteThisFromDB(art)" class="btn btn-danger btn-sm d-flex align-items-center">Delete</button>
+            </div>
+            
+        </li>
+    </ul>
+            
+        
+
+</div>

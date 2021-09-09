@@ -1,0 +1,19 @@
+<div >
+    <div class="container">
+       <h2>Projects<button  routerLink="/project-new"  class="addButton btn btn-success btn-sm d-flex align-items-center">New Project</button></h2> 
+    </div>
+    
+    <ul>
+        <li *ngFor="let project of projects">
+            <a routerLink='/projects/{{project._id}}'>{{project.title}}</a>
+            <div>
+                <button routerLink='/project-edit/{{project._id}}' class="btn btn-primary btn-sm d-flex align-items-center">Edit</button>
+                <button (click)="deleteThisFromDB(project)" class="btn btn-danger btn-sm d-flex align-items-center">Delete</button>
+            </div>
+            
+        </li>
+    </ul>
+            
+        
+
+</div>
